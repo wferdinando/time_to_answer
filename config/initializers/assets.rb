@@ -26,7 +26,8 @@ Rails.application.config.assets.precompile += %w( sb-admin-2.min.js
                                                   sb-admin-2.min.css
                                                   custom.min.css
                                                   custom.min.js
-                                                  img.jpg
+                                                  appcustom.css
+                                                  img.png
 )
 
 # /vendor/assets

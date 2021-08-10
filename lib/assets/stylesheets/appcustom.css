@@ -1,0 +1,11 @@
+.page-header{
+  margin: 15px 0 20px !important; 
+  border-bottom: dotted 1px #ccc !important;
+}
+
+.btn-novo{
+  padding: 6px 50px !important;
+}
+.btn-sair{
+  padding: 6px 35px !important;
+}
