@@ -83,7 +83,6 @@
         <div class="container-fluid">
           <div class="row">
             <div class="col-lg-12">
-            <%= action_name %>
               <%= yield %>
             </div>
             <!-- /.col-lg-12 -->
@@ -100,5 +99,20 @@
     <%= javascript_include_tag 'application' %>
     <%= javascript_include_tag 'admins_backoffice' %>
 
-  </body>
+    <% if notice %>
+      <%= javascript_tag do %>
+        $.bootstrapGrowl('<%= notice %>', {
+        ele: 'body', // which element to append to
+        type: 'success', // (null, 'info', 'error', 'success')
+        offset: {from: 'top', amount: 20}, // 'top', or 'bottom'
+        align: 'center', // ('left', 'right', or 'center')
+        width: 'auto', // (integer, or 'auto')
+        delay: 4000,
+        allow_dismiss: true,
+        stackup_spacing: 10 // spacing between consecutively stacked growls.
+        });
+      </script>
+    <% end %>
+  <% end %>
+</body>
 </html>

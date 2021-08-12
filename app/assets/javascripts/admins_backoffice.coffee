@@ -6,3 +6,4 @@
 //= require bootstrap/dist/js/bootstrap.min
 //= require metismenu/dist/metisMenu.min
 //= require sb-admin-2.min
+//= require bootstrap-growl-ifightcrime/jquery.bootstrap-growl
