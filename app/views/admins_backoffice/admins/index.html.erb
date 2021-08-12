@@ -35,7 +35,9 @@
                   <i class="fa fa-edit"></i> Editar
                 <% end %>
 
-                <button type="button" class="btn btn-sm btn-danger"><i class="fa fa-trash-o"></i> Excluir</button>
+                <%= link_to admins_backoffice_admin_path(admin), method: :delete, class:"btn btn-sm btn-danger", data: {confirm: "Deseja excluir o adminstrador: #{admin.email}?"} do %>
+                  <i class="fa fa-trash-o"></i> Excluir
+                <% end %>
               </td>
             </tr>
           <% end %>
