@@ -1,0 +1,64 @@
+<div class="row page-header">
+  <div class="col-lg-7">
+    <h1 class="">Novo Administrador</h1>
+  </div>
+  <div class="col-lg-5">
+    <div style="margin-top: 30px; text-align: right;">
+      <%= link_to admins_backoffice_welcome_index_path, class:"btn btn-default btn-sair" do %>
+        <i class="fa fa-arrow-left"></i> Sair
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<!-- START MESSAGES -->
+<% if @admin.errors.any? %>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-danger alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+        <ul>
+          <% @admin.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+  </div>
+<% end %>
+<!-- END MESSAGES -->
+
+<div class="panel panel-default">
+  <div class="panel-body">
+    <div class="row">
+
+      <%= form_with(model: [:admins_backoffice, @admin], local: true) do |form| %>
+        <div class="col-md-12">
+          <div class="form-group">
+            <%= form.label :email %>
+            <%= form.text_field :email, class: 'form-control', placeholder:'E-mail do Administrador' %>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= form.label :password %>
+            <%=form.password_field :password, class:'form-control', placeholder:'Insira a Senha - Minimo 6 Caracteres' %>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <%= form.label :password_confirmation %>
+            <%=form.password_field :password_confirmation, class:'form-control', placeholder:'Digite novamente a senha' %>
+          </div>
+        </div>
+
+        <div class="col-md-12">
+          <button type="submit" class="btn btn-primary btn-novo">Alterar</button>
+        </div>
+
+      <% end %>
+    </div>
+  </div>
+</div>
