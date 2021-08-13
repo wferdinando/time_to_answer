@@ -35,6 +35,8 @@ gem 'tty-spinner'
 gem 'rails-i18n', '~> 5.1' # For 5.0.x, 5.1.x and 5.2.x
 #Faker
 gem 'faker'
+#Kaminari Pagination
+gem 'kaminari'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
